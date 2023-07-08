@@ -1,6 +1,6 @@
 
 
-const admin_review_baseurl = `http://localhost:3000`
+const admin_review_baseurl =`https://quaint-flannel-shirt-moth.cyclic.app`
 
 
 const adminuserReviewtoken = localStorage.getItem('usertoken') || null;

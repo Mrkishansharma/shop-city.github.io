@@ -1,6 +1,6 @@
 
 
-const admin_feedback_baseurl = `http://localhost:3000`
+const admin_feedback_baseurl = `https://quaint-flannel-shirt-moth.cyclic.app`
 
 
 const adminuserfeedtoken = localStorage.getItem('usertoken') || null;

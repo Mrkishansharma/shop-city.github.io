@@ -1,5 +1,5 @@
 
-const admin_baseurl = `http://localhost:3000`
+const admin_baseurl = `https://quaint-flannel-shirt-moth.cyclic.app`
 
 
 const adminusertoken = localStorage.getItem('usertoken') || null;
