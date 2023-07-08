@@ -2,7 +2,7 @@
 let cartitems = []
 
 
-const BaseUrl = `http://localhost:3000`
+const BaseUrl = `https://quaint-flannel-shirt-moth.cyclic.app`
 
 
 // take it from local storrage.

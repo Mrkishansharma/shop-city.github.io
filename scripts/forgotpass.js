@@ -1,3 +1,4 @@
+const fotgot_Base = `https://quaint-flannel-shirt-moth.cyclic.app`
 function handleSubmitForgotPass(e){
 
     e.preventDefault()
@@ -11,7 +12,7 @@ function handleSubmitForgotPass(e){
     
     const forgetpassuserEmail = document.getElementById('forgetpassuserEmail').value;
 
-    fetch(`http://localhost:3000/user/request-forgot-password`, {
+    fetch(`${fotgot_Base}/user/request-forgot-password`, {
         method : "PATCH",
         headers:{
             "content-type" : "application/json"

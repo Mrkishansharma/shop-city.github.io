@@ -1,6 +1,6 @@
 
 
-const BaseURL = `http://localhost:3000`
+const BaseURL = `https://quaint-flannel-shirt-moth.cyclic.app`
 
 let registerForm = document.getElementById('registeruser');
 

@@ -1,5 +1,5 @@
 
-const query_base_URL = `http://localhost:3000`
+const query_base_URL = `https://quaint-flannel-shirt-moth.cyclic.app`
 
 
 const queryformele = document.getElementById('contactqueryForm');

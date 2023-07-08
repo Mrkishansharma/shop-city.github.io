@@ -1,5 +1,5 @@
 
-const BaseUrL = `http://localhost:3000`
+const BaseUrL = `https://quaint-flannel-shirt-moth.cyclic.app`
 
 let ProductData = [];
 

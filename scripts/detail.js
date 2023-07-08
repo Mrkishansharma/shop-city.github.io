@@ -1,5 +1,5 @@
 
-const Baseurl = `http://localhost:3000`
+const Baseurl =`https://quaint-flannel-shirt-moth.cyclic.app`
 
 let productID = localStorage.getItem("productID");
 

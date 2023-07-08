@@ -1,5 +1,5 @@
 
-const BaseURL = `http://localhost:3000`
+const BaseURL = `https://quaint-flannel-shirt-moth.cyclic.app`
 
 let productcont = document.getElementById("Niteshproductscontainer");
 

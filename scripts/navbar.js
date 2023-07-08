@@ -1,5 +1,5 @@
 
-const base_Url_Nav = `http://localhost:3000`
+const base_Url_Nav = `https://quaint-flannel-shirt-moth.cyclic.app`
 
 const token_nav = localStorage.getItem("usertoken") || null;
 
