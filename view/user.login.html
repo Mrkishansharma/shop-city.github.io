@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <!-- login style sheet -->
+
+    <link rel="stylesheet" href="../styles/user.login.css">
+
+    <link rel="stylesheet" href="../styles/navbar.css">
+
+    <!-- login style sheet -->
+
+    <!-- Google fonts Poppins -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Google fonts Poppins -->
+
+    <!-- font awesome icon library -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font awesome icon library -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+
+<body>
+
+
+    <!--  Nav bar   -->
+
+
+    <div class="shop-nav-header">
+
+        <div class="shop-city-logo">
+
+            <a href="../index.html"><img src="../shopcity.png" alt=""></a>
+
+        </div>
+
+        <div class="shopcity-nav-search">
+
+            <!-- <form> -->
+
+                <input type="text" placeholder="Search Here" oninput="handleNavSearchBar(value)">
+
+            <!-- </form> -->
+
+        </div>
+
+        <div class="shop-nav-icons">
+
+
+            <!-- /* drop down */ -->
+
+            <div class="dropdown" id="dropdownForProfile">
+                <!-- <button class="dropbtn">Dropdown</button> -->
+                <a href="#" class="fa fa-user-circle-o dropbtn"></a>
+                <div class="dropdown-content">
+                    <p id="ShowUserName">Name</p>
+                    <a href="#">Profile</a>
+                    <a href="#">Dashboard</a>
+                    <a href="#" id="logedOutBtn">Logout</a>
+                </div>
+            </div>
+
+
+
+
+
+            <a href="./cart.html" class="fa fa-shopping-cart"><sup></sup></a>
+            <a href="./order.html" class="fa fa-truck"></a>
+            <a href="#" class="fa fa-bars"></a>
+        </div>
+
+    </div>
+
+
+    <div class="shop-city-links">
+
+        <a href="../index.html">Home</a>
+        <a href="./products.html">Store</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./user.login.html" id="LogedInBtn">Login</a>
+
+    </div>
+
+
+    <!--  Nav bar   -->
+
+
+
+    <!-- Login Form -->
+
+    <div class="login-form">
+
+        <h2>Sign In</h2>
+
+        <form id="login-user">
+
+            <input type="email" placeholder="Enter your Email-id" id="useremail" required>
+            <input type="password" placeholder="Enter your password" id="userpass" required>
+
+            <div>
+
+                <a href="./forgetpass.html">Forgot Password</a>
+            </div>
+
+            <!-- <input type="submit" value="Login"> -->
+            <button type="submit" id="loginBtnHai"> Login </button>
+
+        </form>
+
+        <p>New User ?</p>
+
+        <a href="./user.register.html">Create New Account</a>
+
+        <button onclick="HandleGoogleSignup()" id="niteshgoogleauth"> Continue With Google </button>
+
+    </div>
+
+    <!-- Login Form -->
+
+    <footer class="shop-footer">
+		<div class="shop-city-container">
+			<div class="shop-row">
+				<div class="shop-footer-col">
+					<h4>Company</h4>
+					<ul>
+						<li><a href="./about.html">About us</a></li>
+						<li><a href="#">Our Services</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="shop-footer-col">
+					<h4>Get Help</h4>
+					<ul>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Shipping</a></li>
+						<li><a href="#">Order Status</a></li>
+					</ul>
+				</div>
+				<div class="shop-footer-col">
+					<h4>Online Shop</h4>
+					<ul>
+						<li><a href="#">Men</a></li>
+						<li><a href="#">Women</a></li>
+						<li><a href="#">Kids</a></li>
+					</ul>
+				</div>
+				<div class="shop-footer-col">
+					<h4>Follow us</h4>
+					<div class="shop-social-links">
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+						<a href="#"><i class="fa-brands fa-github"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>
+
+<script src="../scripts/user.login.js"></script>
+
+<script src="../scripts/index.js"></script>
+<script src="../scripts/navbar.js"></script>

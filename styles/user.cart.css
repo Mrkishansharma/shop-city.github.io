@@ -1,0 +1,226 @@
+.Nitesh_cartdiv {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* grid-template-rows: 100% 20%; */
+    gap: 40px;
+}
+
+#Nitesh_Cart_items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: auto;
+    text-align: center;
+    line-height: 35px;
+    width: 100%;
+}
+
+#Shoppingitems {
+    margin: 25px auto;
+    text-align: center;
+    /* border: 1px solid red; */
+    width: 80%;
+}
+
+#Nitesh_Cart_items>div {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: justify;
+    cursor: pointer;
+}
+
+#Nitesh_Cart_items>div>button {
+    color: white;
+    background-color: crimson;
+    font-size: 15px;
+    float: right;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+   
+}
+
+#Nitesh_Cart_items>div>select {
+    color: white;
+    background-color:rgb(5 185 100);
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+#Nitesh_Cart_items img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+}
+
+#Nitesh_Order_Summary {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    margin: 10px auto;
+    /* border:  2px solid red; */
+    background-color: cornsilk;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    line-height: 45px;
+}
+
+
+#Nitesh_Order_Summary>div {
+    padding: 5px 10px 5px 10px;
+    /* border: 2px dashed; */
+}
+
+#Nitesh_Order_Summary>div>p {
+    color: gray;
+}
+
+#Nitesh_Order_Summary>div>p>span {
+    float: right;
+}
+
+#Nitesh_Order_Summary>div>button {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    background-color: green;
+    border: none;
+    padding: 7x;
+}
+
+#Nitesh_Order_Summary>div>button:hover {
+    cursor: pointer;
+}
+
+#Nitesh_Order_Summary>div:nth-child(3) {
+    display: flex;
+    width: 100%;
+    margin: auto;
+
+}
+
+#Nitesh_Order_Summary>div:nth-child(3)>div:nth-child(2) {
+    display: flex;
+    margin: auto 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+
+}
+
+#Nitesh_Order_Summary>div:nth-child(3)>div>img {
+    width: 15%;
+}
+
+#Nitesh_Order_Summary>div:nth-child(4) span {
+    float: right;
+    color: rgb(121, 121, 232);
+    font-size: 10px;
+}
+
+#Nitesh_Order_Summary>div>h3>span {
+    float: right;
+}
+
+
+
+#loading_gif {
+    margin: auto;
+    grid-area: 1/1/3/3;
+    width: 100% !important;
+    border: none;
+    box-shadow: none !important;
+    /* border: 20px solid red; */
+}
+
+
+#loading_gif >img{
+    width: 55%;
+    margin: auto;
+    /* border: 2px solid  green; */
+    display: block;
+}
+
+
+
+@media screen and (max-width:1000px) and (min-width:750px) {
+    .Nitesh_cartdiv {
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 100% 20%; */
+        gap: 10px;
+    }
+
+    #Nitesh_Cart_items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #Nitesh_Order_Summary {
+        width: 80%;
+        height: fit-content;
+        margin: 10px auto;
+        line-height: 50px;
+    }
+}
+
+
+@media screen and (max-width:750px) {
+    .Nitesh_cartdiv {
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 100% 20%; */
+        gap: 10px;
+    }
+
+    #Nitesh_Cart_items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #Nitesh_Order_Summary {
+        /* width: 80%; */
+        height: fit-content;
+        margin: 10px auto;
+        /* line-height: 50px; */
+    }
+
+
+    #loading_gif >img{
+        width: 75%;
+       
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    width: 100%;
+}
+
+footer img {
+    width: 100%;
+}

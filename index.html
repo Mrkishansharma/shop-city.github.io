@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+
+    <!-- Google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Google fonts -->
+
+    <!-- font awesome icon library -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font awesome icon library -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <!-- Home page Style sheet -->
+
+    <link rel="stylesheet" href="./styles/carousel.css">
+    <link rel="stylesheet" href="./styles/home.style.css">
+
+    <link rel="stylesheet" href="./styles/navbar.css">
+
+
+    <!-- Home page Style sheet -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+
+
+<body>
+
+
+    <!-- Nav section -->
+
+    <div class="shop-nav-header">
+
+        <div class="shop-city-logo">
+
+            <a href="./index.html"><img src="./shopcity.png" alt=""></a>
+
+        </div>
+
+        <div class="shopcity-nav-search">
+
+            <!-- <form> -->
+
+            <input type="text" placeholder="Search Here" oninput="handleNavSearchBarHome(value)">
+
+            <!-- </form> -->
+
+        </div>
+
+        <div class="shop-nav-icons">
+
+
+            <!-- /* drop down */ -->
+
+            <div class="dropdown" id="dropdownForProfile">
+                <!-- <button class="dropbtn">Dropdown</button> -->
+                <a href="#" class="fa fa-user-circle-o dropbtn"></a>
+                <div class="dropdown-content">
+                    <p id="ShowUserName">Name</p>
+                    <a href="./view/profile.html">Profile</a>
+                    <a href="./Admin/dashboard.html">Dashboard</a>
+                    <a href="#" id="logedOutBtn">Logout</a>
+                </div>
+            </div>
+
+            <a href="./view/cart.html" class="fa fa-shopping-cart"><sup></sup></a>
+            <a href="./view/order.html" class="fa fa-truck"></a>
+            <a href="#" class="fa fa-bars"></a>
+        </div>
+
+    </div>
+
+
+    <div class="shop-city-links">
+
+        <a href="./index.html">Home</a>
+        <a href="./view/products.html">Store</a>
+        <a href="./view/about.html">About</a>
+        <a href="./view/contact.html">Contact</a>
+        <a href="./view/user.login.html" id="LogedInBtn">Login</a>
+
+    </div>
+
+
+
+    <!-- Nav section -->
+
+
+    <!-- Top section -->
+
+
+    <div class="niteshtopsection" >
+       
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="./Images/carousel/cr1.jpg"
+                    style="width:100%">
+                <div class="text">Caption One</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./Images/carousel/cr3.jpg"
+                    style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./Images/carousel/cr5.jpg"
+                    style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./Images/carousel/cr6.jpg"
+                    style="width:100%">
+                <div class="text">Caption Four</div>
+            </div>
+
+
+                    
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <!-- crousal end -->
+    </div>
+
+    <h2>Products For You</h2>
+    <div class="nitesh_top_grid">
+
+        <!-- append men product here -->
+
+
+    </div>
+
+    <!-- Top section -->
+
+
+    <!-- middle section -->
+
+
+    <div class="mylowerbottom">
+
+        <h2>Trending Dresses</h2>
+
+        <div class="nitesh_lower_bottom">
+            <!--             
+            append womed products here -->
+
+        </div>
+
+    </div>
+
+    <h2>Kids Products</h2>
+
+    <div class="nitesh_ourbrandsection">
+
+
+    </div>
+
+    <!-- middle section -->
+
+
+    <!-- lower bottom -->
+
+    <div class="nitesh_middle_section">
+
+        <h2>Popular Brands</h2>
+
+        <div class="Nitesh_section_grid">
+
+            <div>
+                <img src="https://img.shop.com/Image/homepage/shop-usa-108300-Easter-banner-600x600-img-min1679961158456.jpg?id=5271834"
+                    alt="Error">
+            </div>
+
+            <div>
+
+
+                <div>
+                    <img src="https://img.shop.com/Image/homepage/nike_140x110-img.gif?id=5178505" alt="Error">
+                </div>
+                <div>
+                    <img src="https://img.shop.com/Image/homepage/michaelkors_140x110-img.gif?id=5178506" alt="Error">
+                </div>
+                <div>
+                    <img src="https://img.shop.com/Image/homepage/coach_brand7.jpg?id=5178507" alt="Error">
+                </div>
+                <div>
+                    <img src="https://img.shop.com/Image/homepage/adidaslogo_140_1100.jpg?id=5178508" alt="Error">
+                </div>
+                <div>
+                    <img src="./Images/g1.png" alt="Error">
+                </div>
+                <div>
+                    <img src="./Images/g2.png" alt="Error">
+                </div>
+                <div>
+                    <img src="./Images/g3.png" alt="Error">
+                </div>
+                <div>
+                    <img src="./Images/g4.png" alt="Error">
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <!-- lower bottom -->
+
+
+
+
+    <footer class="shop-footer">
+        <div class="shop-city-container">
+            <div class="shop-row">
+                <div class="shop-footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="./view/about.html">About us</a></li>
+                        <li><a href="./view/products.html">Our Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="shop-footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="./view/contact.html">FAQ</a></li>
+                        <li><a href="./view/order.html">Shipping</a></li>
+                        <li><a href="./view/order.html">Order Status</a></li>
+                    </ul>
+                </div>
+                <div class="shop-footer-col">
+                    <h4>Online Shop</h4>
+                    <ul>
+                        <li><a href="./view/products.html">Men</a></li>
+                        <li><a href="./view/products.html">Women</a></li>
+                        <li><a href="./view/products.html">Kids</a></li>
+                    </ul>
+                </div>
+                <div class="shop-footer-col">
+                    <h4>Follow us</h4>
+                    <div class="shop-social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+</body>
+
+</html>
+
+<script src="./scripts/index.js"></script>
+
+<script src="./scripts/navbar.js"></script>
+
+<script src="./scripts/home.js"></script>
+

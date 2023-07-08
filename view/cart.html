@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+
+    <!-- Cart style sheet -->
+
+    <link rel="stylesheet" href="../styles/navbar.css">
+
+    <link rel="stylesheet" href="../styles/user.cart.css">
+
+    <!-- Cart style sheet -->
+
+
+    <!-- Google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Google fonts -->
+
+    <!-- font awesome icon library -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font awesome icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+
+<body>
+
+    <!-- Nav section -->
+
+    <div class="shop-nav-header">
+
+        <div class="shop-city-logo">
+
+            <a href="../index.html"><img src="../shopcity.png" alt=""></a>
+
+        </div>
+
+        <div class="shopcity-nav-search">
+
+            <!-- <form> -->
+
+                <input type="text" placeholder="Search Here" oninput="handleNavSearchBar(value)">
+                
+            <!-- </form> -->
+
+        </div>
+
+        <div class="shop-nav-icons">
+
+
+            <!-- /* drop down */ -->
+
+            <div class="dropdown" id="dropdownForProfile">
+                <!-- <button class="dropbtn">Dropdown</button> -->
+                <a href="#" class="fa fa-user-circle-o dropbtn"></a>
+                <div class="dropdown-content">
+                    <p id="ShowUserName">Name</p>
+                    <a href="./profile.html">Profile</a>
+                    <a href="../Admin/dashboard.html">Dashboard</a>
+                    <a href="#" id="logedOutBtn">Logout</a>
+                </div>
+            </div>
+
+
+
+
+
+            <a href="./cart.html" class="fa fa-shopping-cart"><sup></sup></a>
+            <a href="./order.html" class="fa fa-truck"></a>
+            <a href="#" class="fa fa-bars"></a>
+        </div>
+
+    </div>
+
+
+    <div class="shop-city-links">
+
+        <a href="../index.html">Home</a>
+        <a href="./products.html">Store</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./user.login.html" id="LogedInBtn">Login</a>
+
+    </div>
+
+
+
+    <!-- Nav section -->
+
+
+    <!-- Cart Section -->
+
+
+    <h3 id="Shoppingitems">Shopping Cart :- <span id="totalCartCount"></span></h3>
+
+    <div class="Nitesh_cartdiv">
+
+
+        <div id="Nitesh_Cart_items">
+
+
+        </div>
+
+        <div id="Nitesh_Order_Summary">
+
+            <div>
+                <h2>Order Summary</h2>
+                <p>SubTotal <span></span></p>
+                <p>Shipping <span>-</span></p>
+                <p>Tax <span>-</span></p>
+                <hr>
+                <h3>Total <span></span></h2>
+                    <button id="nitesh_checkoutbtn">Checkout</button>
+            </div>
+
+            <hr>
+
+            <div>
+                <div>
+                    <h3>Payments </h3>
+                </div>
+                <div>
+                    <img src="https://www.ems.com/assets/1e17b54d.svg" alt="">
+                    <img src="https://www.ems.com/assets/6db70e0b.svg" alt="">
+                    <img src="https://www.ems.com/assets/e2ef118a.svg" alt="">
+                    <img src="https://www.ems.com/assets/a4280dfb.svg" alt="">
+                    <img src="https://www.ems.com/assets/4c78d0d1.svg" alt="">
+                </div>
+            </div>
+
+            <div>
+                <h4>Offers <span>No Cost EMI | Bank Offers</span></h4>
+                <h4>Return <span>Easy return</span></h4>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <hr style="margin:20px">
+
+    <!-- Cart Section -->
+
+
+
+
+
+    <footer class="shop-footer">
+		<div class="shop-city-container">
+			<div class="shop-row">
+				<div class="shop-footer-col">
+					<h4>Company</h4>
+					<ul>
+						<li><a href="./about.html">About us</a></li>
+						<li><a href="#">Our Services</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="shop-footer-col">
+					<h4>Get Help</h4>
+					<ul>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Shipping</a></li>
+						<li><a href="#">Order Status</a></li>
+					</ul>
+				</div>
+				<div class="shop-footer-col">
+					<h4>Online Shop</h4>
+					<ul>
+						<li><a href="#">Men</a></li>
+						<li><a href="#">Women</a></li>
+						<li><a href="#">Kids</a></li>
+					</ul>
+				</div>
+				<div class="shop-footer-col">
+					<h4>Follow us</h4>
+					<div class="shop-social-links">
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+						<a href="#"><i class="fa-brands fa-github"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>
+
+<script src="../scripts/cart.js"></script>
+
+<script src="../scripts/index.js"></script>
+
+<script src="../scripts/navbar.js"></script>

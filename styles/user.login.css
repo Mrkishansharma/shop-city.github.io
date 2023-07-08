@@ -1,0 +1,142 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.login-form{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    margin: 50px auto;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    padding: 50px 10px;
+   
+}
+
+.login-form input, #loginBtnHai{
+    width: 75%;
+    height: 30px;
+    /* border-color: aqua; */
+    margin: 15px auto;
+    border: none;
+    outline: none;
+    border-radius: 8px; 
+    /* border-bottom: 1px solid #333;
+    border-top: 1px solid #333; */
+    text-align: center;
+    letter-spacing: 1px;
+    border: 1px solid gray;
+}
+
+
+ #loginBtnHai{
+    background-color: rgb(45, 37, 37);
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 15px;
+}
+#loginBtnHai:hover{
+    background: transparent;
+    color: #007bff;
+    font-weight: bold;
+    border: 1px solid;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+} 
+
+.login-form  > p{
+    color: black;
+}
+
+.login-form > a{
+    text-decoration: none;
+    color:blue;
+    padding-bottom: 10px;
+}
+
+.login-form > a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: red;
+}
+
+
+
+.login-form > button {
+    border: none;
+    background-color: #007bff;
+    width: 250px;
+    color: white;
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 7px 10px;
+    margin: 15px auto 0px auto;
+}
+
+.login-form > button:hover {
+    background: transparent;
+    color: #007bff;
+    font-weight: bold;
+    border: 1px solid;
+    letter-spacing: 1px;
+}
+
+
+
+.login-form > form > div{
+    /* border: 1px solid red; */
+    width: 45%;
+    float: right;
+    margin-right: 21px;
+
+}
+
+
+.login-form > form > div >a{
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width:1000px) and (min-width:750px) {
+    .login-form{
+        width: 60%;
+        margin: 10vh auto;
+    }
+    
+}
+
+@media screen and (max-width:850px) {
+    .login-form{
+        width: 90%;
+        /* margin: 10vh auto; */
+    }
+    .login-form input{
+        width: 85%;
+    }
+    .login-form > button,#loginBtnHai{
+        width: 225px;
+    }
+
+    .login-form > form > div{
+        /* border: 1px solid red; */
+        width: 65%;
+        /* float: right; */
+        margin-right: -12px;
+    
+    }
+}

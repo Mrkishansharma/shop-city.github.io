@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin User Details</title>
+
+
+    <!-- Google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+
+    <!-- *** -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- *** -->
+
+    <!-- Google fonts -->
+
+    <!-- font awesome icon library -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font awesome icon library -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <link rel="stylesheet" href="./AdminCSS/items.css">
+
+    <link rel="stylesheet" href="../styles/navbar.css">
+
+</head>
+
+<body>
+
+
+    <!-- Nav section -->
+
+    <div class="shop-nav-header">
+
+        <div class="shop-city-logo">
+
+            <a href="../index.html"><img src="../shopcity.png" alt=""></a>
+
+        </div>
+
+        <div class="shopcity-nav-search">
+
+            <!-- <form> -->
+
+                <input type="text" placeholder="Search Here" oninput="handleNavSearchProducts(value)" autofocus>
+
+            <!-- </form> -->
+
+        </div>
+
+        <div class="shop-nav-icons">
+
+
+            <!-- /* drop down */ -->
+
+            <div class="dropdown" id="dropdownForProfile">
+                <!-- <button class="dropbtn">Dropdown</button> -->
+                <a href="#" class="fa fa-user-circle-o dropbtn"></a>
+                <div class="dropdown-content">
+                    <p id="ShowUserName">Name</p>
+                    <a href="../view/profile.html">Profile</a>
+                    <a href="./dashboard.html">Dashboard</a>
+                    <a href="#" id="logedOutBtn">Logout</a>
+                </div>
+            </div>
+
+            <a href="../view/cart.html" class="fa fa-shopping-cart"><sup></sup></a>
+            <a href="../view/order.html" class="fa fa-truck"></a>
+            <a href="#" class="fa fa-bars"></a>
+        </div>
+
+    </div>
+
+
+    <div class="shop-city-links">
+
+        <a href="../index.html">Home</a>
+        <a href="../view/products.html">Store</a>
+        <a href="../view/about.html">About</a>
+        <a href="../view/contact.html">Contact</a>
+        <a href="../view/user.login.html" id="LogedInBtn">Login</a>
+
+    </div>
+
+
+
+    <!-- Nav section -->
+
+
+
+
+    <!-- Admin section -->
+
+
+    <div class="admin-container">
+
+        <div>
+
+            <a href="./dashboard.html">Dashboard</a>
+            <a href="./userdetail.html">User Section</a>
+            <a href="./items.html" style="font-weight: bolder; color: black;">Product Section</a>
+            <a href="./order.html">Order Section</a>
+            <a href="./review.html">Review Section</a>
+            <a href="./feedback.html">Feedback</a>
+
+
+        </div>
+
+        <div>
+            <div class="itemFilterSections">
+                <button id="addProductBtn_item" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#addProduct" data-bs-whatever="@mdo">
+                    <span>Add Product</span>
+                </button>
+                <select id="shop_categoryselect" onchange="handleFilterByCategory(event)">
+                    <option value="">Filter By Category</option>
+                    <option value="Men">Men</option>
+                    <option value="Women">Women</option>
+                    <option value="Kids">Kids</option>
+                </select>
+            </div>
+
+            <div id="adminitemscontainer">
+
+                <!-- data render here -->
+
+            </div>
+
+        </div>
+        
+
+        <!-- Don't Try to Touch this Element  -->
+        
+        <div></div>
+
+        <!-- Don't Try to Touch this Element  -->
+        
+        <div id="pagination_wrapper_btn"></div>
+        
+    </div>
+
+
+
+
+
+    
+    
+
+
+    <!-- Admin section -->
+
+
+
+
+
+
+
+    <div class="modal fade" id="addProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="../shopcity.png" alt="ShopCity" class="modal-title" style="width: 100px;">
+                    <h5 class="modal-title" style="margin-left: 35px;">Enter Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        id="addd_close_btn"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addProductForm" enctype="multipart/form-data" onsubmit="handleAddProduct(event)">
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Title:</label>
+                            <input type="text" class="form-control" id="productTitle" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Category:</label>
+                            <!-- <input type="text" class="form-control" id="productCategory" required> -->
+                            <select class="form-control" id="productCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="Men">Men</option>
+                                <option value="Women">Women</option>
+                                <option value="Kids">Kids</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Quantity:</label>
+                            <input type="number" class="form-control" id="productQuantity" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Image :</label>
+                            <input type="file" accept="image/*" class="form-control" id="productImage" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Price:</label>
+                            <input type="number" class="form-control" id="productPrice" required>
+                        </div>
+                        <!-- <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Rating:</label>
+                            <input type="text" class="form-control" id="productRating" required>
+                        </div> -->
+                        <div class="mb-2">
+                            <label for="message-text" class="col-form-label">Description:</label>
+                            <textarea class="form-control" id="productDesc" required></textarea>
+                        </div>
+
+
+                        <!-- <div class="mb-3"> -->
+                        <input type="submit" class="form-control btn btn-secondary mb-3" id="recipient-name"
+                            value="Add Product" style="margin-top: 10px; padding: 10px; font-size: 1.2rem;">
+                        <!-- </div> -->
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="editProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="../shopcity.png" alt="ShopCity" class="modal-title" style="width: 100px;">
+                    <h5 class="modal-title" style="margin-left: 35px;">Edit Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        id="edit_close_btn"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editProductForm" onsubmit="handleEditProduct(event)">
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Product ID:</label>
+                            <input type="text" class="form-control" id="productIdEdit" disabled>
+                        </div>
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Rating:</label>
+                            <input type="text" class="form-control" id="productRatingEdit" disabled>
+                        </div>
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Title:</label>
+                            <input type="text" class="form-control" id="productTitleEdit" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Category:</label>
+                            <select class="form-control" id="productCategoryEdit" required>
+                                <option value="">Select Category</option>
+                                <option value="Men">Men</option>
+                                <option value="Women">Women</option>
+                                <option value="Kids">Kids</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Quantity:</label>
+                            <input type="number" class="form-control" id="productQuantityEdit" required>
+                        </div>
+                        <!-- <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Image :</label>
+                            <input type="file" class="form-control" id="productImageEdit" required >
+                        </div> -->
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Price:</label>
+                            <input type="number" class="form-control" id="productPriceEdit" required>
+                        </div>
+                       
+                        <div class="mb-2">
+                            <label for="message-text" class="col-form-label">Description:</label>
+                            <textarea class="form-control" id="productDescEdit" required></textarea>
+                        </div>
+
+
+                        <!-- <div class="mb-3"> -->
+                        <input type="submit" class="form-control btn btn-secondary mb-3" id="recipient-name"
+                            value="Update Product" style="margin-top: 10px; padding: 10px; font-size: 1.2rem;">
+                        <!-- </div> -->
+
+                    </form>
+                    <form id="editProductImageForm" onsubmit="handleEditProductImage(event)">
+                        
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Image :</label>
+                            <input type="file" accept="image/*" class="form-control" id="productImageEdit">
+                        </div>
+                        
+                        <input type="submit" class="form-control btn btn-secondary mb-3" id="recipient-name"
+                            value="Update Product Image" style="margin-top: 10px; padding: 10px; font-size: 1.2rem;">
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer class="shop-footer">
+        <div class="shop-city-container">
+            <div class="shop-row" id="shop_footer_rows">
+                <div class="shop-footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="./view/about.html">About us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="shop-footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Order Status</a></li>
+                    </ul>
+                </div>
+                <div class="shop-footer-col">
+                    <h4>Online Shop</h4>
+                    <ul>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Kids</a></li>
+                    </ul>
+                </div>
+                <div class="shop-footer-col">
+                    <h4>Follow us</h4>
+                    <div class="shop-social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+<script src="../Admin/AdminScript/items.js"></script>
+<script src="../scripts/index.js"></script>
+
+<script src="../scripts/navbar.js"></script>
