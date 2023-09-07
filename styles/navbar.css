@@ -10,6 +10,7 @@
 
 .shop-nav-header {
     background-color: #007bff;
+    /* background-color: #001221; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 0px 25px;
