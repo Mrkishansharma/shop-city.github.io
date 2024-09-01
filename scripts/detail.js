@@ -1,5 +1,5 @@
 
-const Baseurl =`https://quaint-flannel-shirt-moth.cyclic.app`
+const Baseurl =`https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
 
 let productID = localStorage.getItem("productID");
 

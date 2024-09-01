@@ -1,5 +1,5 @@
 
-const admin_baseurl = `https://quaint-flannel-shirt-moth.cyclic.app`
+const admin_baseurl = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
 
 
 const adminusertoken = localStorage.getItem('usertoken') || null;

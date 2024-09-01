@@ -1,5 +1,5 @@
 
-const query_base_URL = `https://quaint-flannel-shirt-moth.cyclic.app`
+const query_base_URL = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
 
 
 const queryformele = document.getElementById('contactqueryForm');

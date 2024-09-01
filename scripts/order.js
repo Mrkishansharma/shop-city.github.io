@@ -1,6 +1,6 @@
 
 
-const baseUrl =`https://quaint-flannel-shirt-moth.cyclic.app`
+const baseUrl =`https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
 
 let allOrdersHere = document.getElementById('allOrdersHere');
 

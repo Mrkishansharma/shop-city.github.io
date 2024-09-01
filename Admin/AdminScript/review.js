@@ -1,6 +1,6 @@
 
 
-const admin_review_baseurl =`https://quaint-flannel-shirt-moth.cyclic.app`
+const admin_review_baseurl =`https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
 
 
 const adminuserReviewtoken = localStorage.getItem('usertoken') || null;

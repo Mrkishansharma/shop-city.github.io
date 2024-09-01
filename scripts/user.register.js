@@ -1,6 +1,6 @@
 
 
-const BaseURL = `https://quaint-flannel-shirt-moth.cyclic.app`
+const BaseURL = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
 
 let registerForm = document.getElementById('registeruser');
 

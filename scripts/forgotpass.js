@@ -1,4 +1,4 @@
-const fotgot_Base = `https://quaint-flannel-shirt-moth.cyclic.app`
+const fotgot_Base = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
 function handleSubmitForgotPass(e){
 
     e.preventDefault()

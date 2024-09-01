@@ -1,5 +1,5 @@
 
-const forgotPasswordBaseUrl = `https://quaint-flannel-shirt-moth.cyclic.app`
+const forgotPasswordBaseUrl = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
 
 let a = new URLSearchParams(window.location.search);
 console.log(a);

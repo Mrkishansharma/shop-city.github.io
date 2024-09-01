@@ -1,5 +1,5 @@
 
-const base_Url_Nav = `https://quaint-flannel-shirt-moth.cyclic.app`
+const base_Url_Nav = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
 
 const token_nav = localStorage.getItem("usertoken") || null;
 

@@ -1,5 +1,5 @@
 
-const BaseUrL = `https://quaint-flannel-shirt-moth.cyclic.app`
+const BaseUrL = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
 
 let ProductData = [];
 

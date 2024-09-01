@@ -1,5 +1,5 @@
 
-const HOMEBASEURL = `https://quaint-flannel-shirt-moth.cyclic.app`
+const HOMEBASEURL = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
 
 const Mencont = document.querySelector('.nitesh_top_grid');
 

@@ -1,5 +1,5 @@
 
-const BASEURL = `https://quaint-flannel-shirt-moth.cyclic.app`
+const BASEURL = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
 
 
 let a = new URLSearchParams(window.location.search);
