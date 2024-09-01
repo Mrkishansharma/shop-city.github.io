@@ -1,4 +1,4 @@
-const fotgot_Base = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
+const fotgot_Base = `https://shopcity-mrkishansharma.vercel.app`
 function handleSubmitForgotPass(e){
 
     e.preventDefault()

@@ -1,5 +1,5 @@
 
-const profile_baseurl =`https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
+const profile_baseurl =`https://shopcity-mrkishansharma.vercel.app`
 
 
 

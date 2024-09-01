@@ -1,5 +1,5 @@
 
-const BaseURL = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
+const BaseURL = `https://shopcity-mrkishansharma.vercel.app`
 
 const loginform = document.getElementById("login-user");
 

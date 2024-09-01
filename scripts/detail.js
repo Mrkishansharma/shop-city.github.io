@@ -1,5 +1,5 @@
 
-const Baseurl =`https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
+const Baseurl =`https://shopcity-mrkishansharma.vercel.app`
 
 let productID = localStorage.getItem("productID");
 

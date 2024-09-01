@@ -1,5 +1,5 @@
 
-const BASEURL = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
+const BASEURL = `https://shopcity-mrkishansharma.vercel.app`
 
 
 let a = new URLSearchParams(window.location.search);

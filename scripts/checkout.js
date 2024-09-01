@@ -1,5 +1,5 @@
 
-const BaseUrL = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
+const BaseUrL = `https://shopcity-mrkishansharma.vercel.app`
 
 let ProductData = [];
 

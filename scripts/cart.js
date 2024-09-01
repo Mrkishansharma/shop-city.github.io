@@ -2,7 +2,7 @@
 let cartitems = []
 
 
-const BaseUrl = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
+const BaseUrl = `https://shopcity-mrkishansharma.vercel.app`
 
 
 // take it from local storrage.

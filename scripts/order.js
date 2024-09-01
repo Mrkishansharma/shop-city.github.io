@@ -1,6 +1,6 @@
 
 
-const baseUrl =`https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
+const baseUrl =`https://shopcity-mrkishansharma.vercel.app`
 
 let allOrdersHere = document.getElementById('allOrdersHere');
 

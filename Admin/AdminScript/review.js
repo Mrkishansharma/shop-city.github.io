@@ -1,6 +1,6 @@
 
 
-const admin_review_baseurl =`https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
+const admin_review_baseurl =`https://shopcity-mrkishansharma.vercel.app`
 
 
 const adminuserReviewtoken = localStorage.getItem('usertoken') || null;

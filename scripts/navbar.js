@@ -1,5 +1,5 @@
 
-const base_Url_Nav = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
+const base_Url_Nav = `https://shopcity-mrkishansharma.vercel.app`
 
 const token_nav = localStorage.getItem("usertoken") || null;
 
