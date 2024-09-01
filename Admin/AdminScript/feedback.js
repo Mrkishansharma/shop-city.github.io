@@ -1,6 +1,6 @@
 
 
-const admin_feedback_baseurl = `https://shop-city-niteshthori24198-niteshthori24198s-projects.vercel.app`
+const admin_feedback_baseurl = `https://shopcity-mrkishansharma.vercel.app`
 
 
 const adminuserfeedtoken = localStorage.getItem('usertoken') || null;
